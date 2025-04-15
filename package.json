@@ -1,0 +1,14 @@
+{
+  "name": "maximus-gym",
+  "version": "1.0.0",
+  "description": "**Maximus** es un sitio web responsivo desarrollado como proyecto académico para la Facultad de Ingeniería de la **Universidad Nacional de Jujuy (UNJu)**. Su objetivo es ofrecer una experiencia atractiva, accesible y moderna para un gimnasio, utilizando tecnologías web actuales.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.5"
+  }
+}
