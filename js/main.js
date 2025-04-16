@@ -49,4 +49,24 @@ $(document).ready(function () {
       });
     }
   );
+
+  //contador animado
+  contador();
 });
+
+function contador() {
+  setInterval(intervalo, 100);
+  let x = 0;
+  const clases = $("*[data-valor]");
+  function intervalo() {
+    x++;
+    for (let i = 0; i < clases.length; i++) {
+      const resultados = parseInt($(clases[i]).attr("data-valor"), 10);
+      if (x > resultados) {
+        continue;
+      } else {
+      }
+      $(clases[i]).text(x);
+    }
+  }
+}
