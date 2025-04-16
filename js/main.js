@@ -52,6 +52,24 @@ $(document).ready(function () {
 
   //contador animado
   contador();
+
+  //Carrusel Automático
+  $("#carouselExampleCaptions").carousel({
+    interval: 3000, // Cambia de imagen cada 3 segundos
+    ride: "carousel", // Activa el desplazamiento automático
+  });
+
+  // Mostrar comentario al pasar el cursor sobre la imagen
+  $(".testimonial-wrapper").hover(
+    function () {
+      $(this).find(".testimonial-caption").fadeIn(300);
+      $(this).find(".testimonial-img").css("transform", "scale(1.03)");
+    },
+    function () {
+      $(this).find(".testimonial-caption").fadeOut(300);
+      $(this).find(".testimonial-img").css("transform", "scale(1)");
+    }
+  );
 });
 
 function contador() {

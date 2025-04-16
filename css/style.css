@@ -89,3 +89,17 @@
 .carousel-control-next-icon:hover {
   background-color: #1e7e34; /* Un verde más oscuro */
 }
+
+.testimonial-caption {
+  display: none;
+  z-index: 10;
+}
+
+.testimonial-wrapper {
+  width: 70%;
+  max-width: 800px;
+}
+
+.testimonial-img {
+  transition: transform 0.3s ease;
+}
