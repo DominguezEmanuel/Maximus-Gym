@@ -1,8 +1,7 @@
 .navbar {
-  background-color: #fff;
+  background-color: #3c3c3c;
   height: 80px;
-  margin: 20px;
-  border-radius: 16px;
+  /*margin: 20px;*/
   padding: 0.5rem;
 }
 
@@ -13,10 +12,15 @@
   transition: 0.3s color;
 }
 
+.offcanvas-body {
+  background-color: #3c3c3c;
+}
+
 .login-button {
   background-color: #009970;
   color: #fff;
   font-size: 14px;
+  font-weight: 600;
   padding: 8px 20px;
   border-radius: 50px;
   text-decoration: none;
@@ -24,7 +28,24 @@
 }
 
 .login-button:hover {
-  background-color: #00b383;
+  background-color: #fff;
+  color: #009970;
+}
+
+.button {
+  background-color: #009970;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s background-color;
+}
+
+.button:hover {
+  background-color: #fff;
+  color: #009970;
 }
 
 .navbar-toggler {
@@ -79,7 +100,7 @@
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-color: #009970; /* Cambia el color al verde */
-  border-radius: 45%; /* Hace que los botones sean circulares */
+  border-radius: 50%; /* Hace que los botones sean circulares */
   width: 40px; /* Ajusta el tamaño del botón */
   height: 40px;
 }
@@ -88,6 +109,8 @@
 .carousel-control-prev-icon:hover,
 .carousel-control-next-icon:hover {
   background-color: #1e7e34; /* Un verde más oscuro */
+  transform: scale(1.5);
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .testimonial-caption {

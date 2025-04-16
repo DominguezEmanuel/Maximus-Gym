@@ -30,7 +30,7 @@
           id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel"
         >
-          <div class="offcanvas-header">
+          <div class="offcanvas-header bg-success">
             <h5
               class="offcanvas-title font-monospace"
               id="offcanvasNavbarLabel"
@@ -49,16 +49,19 @@
               class="navbar-nav justify-content-center flex-grow-1 pe-3 font-monospace"
             >
               <li class="nav-item">
-                <a class="nav-link active mx-lg-2" aria-current="page" href="#"
+                <a
+                  class="nav-link active text-light mx-lg-2"
+                  aria-current="page"
+                  href="#"
                   >Inicio</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link mx-lg-2" href="#">Nosotros</a>
+                <a class="nav-link text-light mx-lg-2" href="#">Nosotros</a>
               </li>
               <li class="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle mx-lg-2"
+                  class="nav-link dropdown-toggle text-light mx-lg-2"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -67,7 +70,9 @@
                   Servicios
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Clases</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Clases</a>
+                  </li>
                   <li><a class="dropdown-item" href="#">Entrenadores</a></li>
                   <li>
                     <a class="dropdown-item" href="#">Precios</a>
@@ -75,10 +80,10 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link mx-lg-2" href="#">Blog</a>
+                <a class="nav-link text-light mx-lg-2" href="#">Blog</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link mx-lg-2" href="#">Contacto</a>
+                <a class="nav-link text-light mx-lg-2" href="#">Contacto</a>
               </li>
             </ul>
           </div>
@@ -132,10 +137,7 @@
               ¡Si lo quieres, tendrás que sangrar por él!
             </p>
           </div>
-          <a
-            href="#precios"
-            class="btn btn-success text-decoration-none text-light font-monospace"
-          >
+          <a href="#precios" class="button text-decoration-none font-monospace">
             Saber más...
           </a>
         </div>
@@ -312,19 +314,23 @@
         <div class="carousel-item active">
           <div class="d-flex justify-content-center">
             <div
-              class="position-relative testimonial-wrapper overflow-hidden rounded"
+              class="position-relative testimonial-wrapper overflow-hidden rounded w-100"
             >
               <img
                 src="images/testimonios/f2.jpg"
                 class="img-fluid w-100 rounded testimonial-img"
                 alt="testimonios-1"
               />
-              <!-- Comentario oculto inicialmente -->
+              <!-- Comentario -->
               <div
                 class="position-absolute top-50 start-50 translate-middle text-center testimonial-caption p-3"
               >
-                <p class="text-light mb-2 font-monospace fs-1">Juan Pérez</p>
-                <p class="text-light mb-0 fs-4">
+                <p
+                  class="text-light mb-2 font-monospace fs-5 text-wrap bg-warning"
+                >
+                  Juan Pérez
+                </p>
+                <p class="text-light mb-0 fs-6 text-wrap">
                   <em
                     >"Excelente servicio y entrenadores. Me siento motivado cada
                     vez que vengo."</em
@@ -337,28 +343,61 @@
         <!--Slide 2-->
         <div class="carousel-item">
           <div class="d-flex justify-content-center">
-            <img
-              src="images/testimonios/f5.jpg"
-              class="d-block w-50"
-              alt="testimonios-2"
-            />
-          </div>
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Some representative placeholder content for the second slide.</p>
+            <div
+              class="position-relative testimonial-wrapper overflow-hidden rounded w-100"
+            >
+              <img
+                src="images/testimonios/f5.jpg"
+                class="img-fluid w-100 rounded testimonial-img"
+                alt="testimonios-2"
+              />
+              <!-- Comentario -->
+              <div
+                class="position-absolute top-50 start-50 translate-middle text-center testimonial-caption p-3"
+              >
+                <p
+                  class="text-light mb-2 font-monospace fs-5 text-wrap bg-danger"
+                >
+                  Ryan Jhonson
+                </p>
+                <p class="text-light mb-0 fs-6 text-wrap">
+                  <em
+                    >"¡El mejor gimnasio al que he ido! Los entrenadores están
+                    súper preparados y siempre están atentos."</em
+                  >
+                </p>
+              </div>
+            </div>
           </div>
         </div>
+        <!--Slide 3-->
         <div class="carousel-item">
           <div class="d-flex justify-content-center">
-            <img
-              src="images/testimonios/f7.jpg"
-              class="d-block w-50"
-              alt="testimonios-3"
-            />
-          </div>
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Third slide label</h5>
-            <p>Some representative placeholder content for the third slide.</p>
+            <div
+              class="position-relative testimonial-wrapper overflow-hidden rounded w-100"
+            >
+              <img
+                src="images/testimonios/f7.jpg"
+                class="img-fluid w-100 rounded testimonial-img"
+                alt="testimonios-3"
+              />
+              <!-- Comentario -->
+              <div
+                class="position-absolute top-50 start-50 translate-middle text-center testimonial-caption p-3"
+              >
+                <p
+                  class="text-light mb-2 font-monospace fs-5 text-wrap bg-info"
+                >
+                  Connor McGregor
+                </p>
+                <p class="text-light mb-0 fs-6 text-wrap">
+                  <em
+                    >"Las instalaciones están limpias y
+                    modernas.¡Recomendado!"</em
+                  >
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
