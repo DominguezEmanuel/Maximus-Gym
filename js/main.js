@@ -9,4 +9,44 @@ $(document).ready(function () {
       $(this).find(".dropdown-menu").stop(true, true).slideUp(200);
     }
   );
+
+  // Animar overlay
+  $("#hero-overlay").animate({ opacity: 0.7 }, 1500);
+
+  // Animaciones del texto
+  $(".info h1").fadeIn(800, function () {
+    $(".info p").slideDown(600, function () {
+      $(".inicio-seccion a").fadeIn(600);
+    });
+  });
+
+  //Animaciones cards
+  $(".card").hover(
+    function () {
+      // Animación de la card
+      $(this).stop().animate({ marginTop: "-10px" }, 200);
+      $(this).css({
+        boxShadow: "0 10px 20px rgba(0, 0, 0, 0.3)",
+        transition: "box-shadow 0.2s ease",
+      });
+
+      // Oscurecer la imagen al hacer hover
+      $(this).find("img").css({
+        filter: "brightness(70%)",
+        transition: "filter 0.2s ease",
+      });
+    },
+    function () {
+      // Volver a estado normal
+      $(this).stop().animate({ marginTop: "0px" }, 200);
+      $(this).css({
+        boxShadow: "none",
+      });
+
+      // Restaurar brillo original de la imagen
+      $(this).find("img").css({
+        filter: "brightness(100%)",
+      });
+    }
+  );
 });

@@ -4,66 +4,196 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Maximus Gym</title>
+    <!--Favicon-->
+    <link rel="icon" href="images/favicon.png" type="image/png" />
     <!--CSS-Bootstrap-->
     <link
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <!--Inicio-Navbar-->
+    <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Maximus Gym</a>
+        <a class="navbar-brand me-auto font-monospace" href="#">Maximus Gym</a>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5
+              class="offcanvas-title font-monospace"
+              id="offcanvasNavbarLabel"
+            >
+              Maximus Gym
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul
+              class="navbar-nav justify-content-center flex-grow-1 pe-3 font-monospace"
+            >
+              <li class="nav-item">
+                <a class="nav-link active mx-lg-2" aria-current="page" href="#"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Nosotros</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle mx-lg-2"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Servicios
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Clases</a></li>
+                  <li><a class="dropdown-item" href="#">Entrenadores</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Precios</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <a href="#" class="login-button font-monospace">Acceder</a>
         <button
-          class="navbar-toggler"
+          class="navbar-toggler pe-0"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html"
-                >Inicio</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="nosotros.html">Nosotros</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Servicios
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="clases.html">Clases</a></li>
-                <li>
-                  <a class="dropdown-item" href="entrenadores.html"
-                    >Entrenadores</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="precios.html">Precios</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contacto.html">Contacto</a>
-            </li>
-          </ul>
-        </div>
       </div>
     </nav>
+    <!--Fin-Navbar-->
+    <!--Seccion Hero-->
+    <div class="hero-container position-relative vh-100 mb-5">
+      <video
+        class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover z-1"
+        autoplay
+        muted
+        loop
+        playsinline
+      >
+        <source src="media/hero.mp4" type="video/mp4" />
+        Tu navegador no soporta videos en HTML5.
+      </video>
+      <!-- Overlay oscuro -->
+      <div
+        id="hero-overlay"
+        class="position-absolute top-0 start-0 w-100 h-100 bg-dark z-0"
+        style="opacity: 0"
+      ></div>
+
+      <!-- Contenido centrado -->
+      <div
+        class="hero-content position-relative z-2 h-100 d-flex align-items-center justify-content-center"
+      >
+        <div class="inicio-seccion text-center">
+          <div class="info">
+            <h1
+              class="text-light fw-bolder font-monospace"
+              style="font-size: 4rem"
+            >
+              ¡<span class="text-success">NUNCA </span>TE RINDAS!
+            </h1>
+            <p class="text-light fs-4 font-monospace">
+              ¡Si lo quieres, tendrás que sangrar por él!
+            </p>
+          </div>
+          <a
+            href="#precios"
+            class="btn btn-success text-decoration-none text-light font-monospace"
+          >
+            Saber más...
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--Fin Hero-->
+    <!--Clases-->
+    <div class="font-monospace text-center mb-3">
+      <h1 class="text-success fw-bolder">Clases Destacadas</h1>
+      <p class="lh-1">
+        En nuestro gimnasio, no solo entrenás... ¡te transformás! 💥 Te
+        ofrecemos clases dinámicas, divertidas y efectivas, pensadas para todos
+        los niveles. Ya sea que busques fuerza, flexibilidad o simplemente
+        liberar el estrés del día, tenemos una clase para vos!
+      </p>
+    </div>
+    <div class="card-group">
+      <div class="card">
+        <img src="images/clases/boxeo.jpg" class="card-img-top" alt="Boxeo" />
+        <div class="card-body">
+          <h5 class="card-title font-monospace fs-4">Boxeo🥊​</h5>
+          <p class="card-text">
+            El boxeo es un entrenamiento intenso que combina ejercicios de
+            fuerza y resistencia con técnicas de golpeo. Ideal para mejorar tu
+            condición física, tonificar el cuerpo y liberar estrés, mientras
+            aprendes las bases del boxeo y el kickboxing.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/clases/yoga.jpg" class="card-img-top" alt="Yoga" />
+        <div class="card-body">
+          <h5 class="card-title font-monospace fs-4">Yoga🧘🏻‍♀️​</h5>
+          <p class="card-text">
+            El yoga es una disciplina que mejora la flexibilidad, fuerza y
+            equilibrio, utilizando posturas físicas y técnicas de respiración.
+            Es perfecto para reducir el estrés, mejorar la postura y encontrar
+            la calma interior, adecuado para todos los niveles.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="images/clases/crossfit.jpg"
+          class="card-img-top"
+          alt="Crossfit"
+        />
+        <div class="card-body">
+          <h5 class="card-title font-monospace fs-4">Crossfit💪🏼​</h5>
+          <p class="card-text">
+            CrossFit es un programa de entrenamiento que mezcla levantamiento de
+            pesas, ejercicios cardiovasculares y movimientos funcionales.
+            Diseñado para mejorar la fuerza, la resistencia y la agilidad, es
+            ideal para quienes buscan un reto físico intenso y mejorar su
+            rendimiento general.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--Fin Clases-->
+    <br />
+    <br />
+    <br />
+    <br /><br /><br /><br /><br />
     <!--JS-Bootstrap-->
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <!--jQuery-->
