@@ -69,3 +69,23 @@
     visibility: visible;
   }
 }
+
+.row > div {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+/* Cambiar el color de los botones de navegación */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #009970; /* Cambia el color al verde */
+  border-radius: 45%; /* Hace que los botones sean circulares */
+  width: 40px; /* Ajusta el tamaño del botón */
+  height: 40px;
+}
+
+/* Opcional: Cambiar el color al pasar el mouse */
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: #1e7e34; /* Un verde más oscuro */
+}

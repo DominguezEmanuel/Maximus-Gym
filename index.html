@@ -11,6 +11,12 @@
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
+    <!--Bootstrap-Icons-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!--CSS-->
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -140,10 +146,11 @@
     <div class="font-monospace text-center mb-3">
       <h1 class="text-success fw-bolder">Clases Destacadas</h1>
       <p class="lh-1">
-        En nuestro gimnasio, no solo entrenás... ¡te transformás! 💥 Te
-        ofrecemos clases dinámicas, divertidas y efectivas, pensadas para todos
-        los niveles. Ya sea que busques fuerza, flexibilidad o simplemente
-        liberar el estrés del día, tenemos una clase para vos!
+        En nuestro gimnasio, no solo entrenás... ¡te transformás!
+        <span class="fs-3">💥</span> Te ofrecemos clases dinámicas, divertidas y
+        efectivas, pensadas para todos los niveles. Ya sea que busques fuerza,
+        flexibilidad o simplemente liberar el estrés del día, tenemos una clase
+        para vos!
       </p>
     </div>
     <div class="card-group mb-5">
@@ -191,59 +198,177 @@
     </div>
     <!--Fin Clases-->
     <!--Contador Animado-->
-    <div class="font-monospace text-center mb-3">
+    <div class="font-monospace text-center mb-5">
       <h1 class="text-success fw-bolder">Nuestra Comunidad</h1>
       <p class="lh-1">
         Nos enorgullece contar con una comunidad en constante crecimiento. Cada
         seguidor representa a alguien que cree en nuestro trabajo y comparte
         nuestra pasión por el bienestar y el entrenamiento. ¡Gracias por ser
-        parte de Maximus Gym!❤️​
+        parte de Maximus Gym!<span class="fs-3">❤️​</span>
       </p>
     </div>
     <div class="container">
       <div class="row justify-content-center align-items-center">
-        <div class="col-6 col-sm-3">
-          <h2 data-valor="100">0</h2>
-          <h4>clientes satisfechos</h4>
+        <!--Clientes-->
+        <div class="col-12 col-sm-3 text-center">
+          <div>
+            <i class="bi bi-people-fill text-success display-4 mb-2"></i>
+          </div>
+          <div class="d-flex align-items-center justify-content-center">
+            <h2 data-valor="500" class="me-2">0</h2>
+            <h4>clientes satisfechos</h4>
+          </div>
           <p>
-            Donec in est mauris. Ut mollis urna vitae justo scelerisque, sodales
-            consequat leo scelerisque
+            <em
+              >Nuestra mayor motivación es ver tus resultados y tu
+              satisfacción.</em
+            >
+          </p>
+        </div>
+        <!--Instagram-->
+        <div class="col-12 col-sm-3 text-center">
+          <div>
+            <i class="bi bi-instagram text-warning display-4 mb-2"></i>
+          </div>
+          <div class="d-flex align-items-center justify-content-center">
+            <h2 data-valor="1100" class="me-2">0</h2>
+            <h4>seguidores</h4>
+          </div>
+          <p>
+            <em
+              >Únete a nuestra comunidad y descubre el día a día del
+              gimnasio.</em
+            >
           </p>
         </div>
 
-        <div class="col-6 col-sm-3">
-          <h2 data-valor="80">0</h2>
-          <h4>seguidores</h4>
+        <!-- Force next columns to break to new line
+        <div class="w-100"></div>-->
+
+        <!--Youtube-->
+        <div class="col-12 col-sm-3 text-center">
+          <div>
+            <i class="bi bi-youtube text-danger display-4 mb-2"></i>
+          </div>
+          <div class="d-flex align-items-center justify-content-center">
+            <h2 data-valor="650" class="me-2">0</h2>
+            <h4>suscriptores</h4>
+          </div>
           <p>
-            Donec in est mauris. Ut mollis urna vitae justo scelerisque, sodales
-            consequat leo scelerisque
+            <em>Mira nuestras rutinas, consejos de entrenamiento y más.</em>
           </p>
         </div>
-
-        <!-- Force next columns to break to new line -->
-        <div class="w-100"></div>
-
-        <div class="col-6 col-sm-3">
-          <h2 data-valor="70">0</h2>
-          <h4>suscriptores</h4>
+        <!--Facebook-->
+        <div class="col-12 col-sm-3 text-center">
+          <div>
+            <i class="bi bi-facebook text-primary display-4 mb-2"></i>
+          </div>
+          <div class="d-flex align-items-center justify-content-center">
+            <h2 data-valor="1000" class="me-2">0</h2>
+            <h4>seguidores</h4>
+          </div>
           <p>
-            Donec in est mauris. Ut mollis urna vitae justo scelerisque, sodales
-            consequat leo scelerisque
-          </p>
-        </div>
-
-        <div class="col-6 col-sm-3">
-          <h2 data-valor="80">0</h2>
-          <h4>seguidores</h4>
-          <p>
-            Donec in est mauris. Ut mollis urna vitae justo scelerisque, sodales
-            consequat leo scelerisque
+            <em>Conéctate con nosotros y entérate de todas las novedades.</em>
           </p>
         </div>
       </div>
     </div>
     <br />
     <!--Fin Contador Animado-->
+    <!--Carrusel Testimonios-->
+    <div class="font-monospace text-center mb-5">
+      <h1 class="text-success fw-bolder">¿Qué opinan nuestros clientes?</h1>
+      <p class="lh-1">
+        La opinión de nuestros miembros es lo más importante. Cada historia,
+        cada logro y cada experiencia nos impulsa a seguir mejorando día a
+        día<span class="fs-3">🔝</span>
+      </p>
+    </div>
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="d-flex justify-content-center">
+            <img
+              src="images/testimonios/f2.jpg"
+              class="d-block w-50"
+              alt="testimonios-1"
+            />
+          </div>
+          <div class="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center">
+            <img
+              src="images/testimonios/f5.jpg"
+              class="d-block w-50"
+              alt="testimonios-2"
+            />
+          </div>
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center">
+            <img
+              src="images/testimonios/f7.jpg"
+              class="d-block w-50"
+              alt="testimonios-3"
+            />
+          </div>
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!--Fin Carrusel-->
+    <br /><br /><br />
     <!--JS-Bootstrap-->
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <!--jQuery-->

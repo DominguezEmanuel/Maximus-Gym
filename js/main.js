@@ -55,7 +55,7 @@ $(document).ready(function () {
 });
 
 function contador() {
-  setInterval(intervalo, 100);
+  setInterval(intervalo, 15);
   let x = 0;
   const clases = $("*[data-valor]");
   function intervalo() {
@@ -66,7 +66,7 @@ function contador() {
         continue;
       } else {
       }
-      $(clases[i]).text(x);
+      $(clases[i]).text(`+${x}`);
     }
   }
 }
