@@ -70,6 +70,34 @@ $(document).ready(function () {
       $(this).find(".testimonial-img").css("transform", "scale(1)");
     }
   );
+
+  //Efecto Spinner
+  $("#contactForm").on("submit", function (e) {
+    e.preventDefault(); // Evita el envío del formulario por defecto
+
+    // Validar campos
+    let isValid = true;
+    $("#contactForm input, #contactForm select, #contactForm textarea").each(
+      function () {
+        if (!this.checkValidity()) {
+          $(this).addClass("is-invalid");
+          isValid = false;
+        } else {
+          $(this).removeClass("is-invalid");
+        }
+      }
+    );
+
+    // Si el formulario es válido, mostrar spinner
+    if (isValid) {
+      $("#spinner").removeClass("d-none"); // Mostrar spinner
+      setTimeout(function () {
+        $("#spinner").addClass("d-none"); // Ocultar spinner después de 2 segundos
+        alert("Formulario enviado con éxito."); // Mensaje de éxito
+        $("#contactForm")[0].reset(); // Reiniciar formulario
+      }, 2000);
+    }
+  });
 });
 
 function contador() {

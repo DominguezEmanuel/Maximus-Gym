@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container-fluid bg-dark mt-5">
+      <footer class="py-4">
+        <div class="row row-cols-1 row-cols-md-4 justify-content-center">
+          <!-- Logo -->
+          <div class="col mb-3 text-center font-monospace" style="border: none">
+            <h5 class="text-light mb-3">Maximus Gym</h5>
+            <img
+              src="images/logo.png"
+              alt="Maximus Gym Logo"
+              class="img-fluid"
+              style="max-width: 175px"
+            />
+            <p class="text-light mt-2">
+              ¡Tu mejor opción para entrenar!<span class="fs-3">🏋🏽‍♂️​</span>
+            </p>
+          </div>
+
+          <!-- Menú -->
+          <div class="col mb-3 text-center font-monospace" style="border: none">
+            <h5 class="text-light mb-3">Menú</h5>
+            <ul class="nav flex-column text-center">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-light">Inicio</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-light">Nosotros</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-light">Clases</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-light">Entrenadores</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-light">Precios</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-light">Blog</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-light">Contacto</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Mapa -->
+          <div class="col mb-3 font-monospace" style="border: none">
+            <h5 class="text-light text-center mb-3">
+              Ubicación<span class="fs-3">📌​</span>
+            </h5>
+            <div
+              class="ratio ratio-4x3"
+              style="max-width: 300px; margin: 0 auto"
+            >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d-122.41941548468132!3d37.77492927975971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f1a8c7b1%3A0x4c8b0c3c8b0c3c8b!2sMaximus%20Gym!5e0!3m2!1ses!2sus!4v1681234567890!5m2!1ses!2sus"
+                width="200"
+                height="150"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="col mb-3" style="border: none">
+            <h5 class="text-light text-center mb-3">Contáctanos</h5>
+            <form>
+              <div class="mb-3">
+                <label for="email" class="form-label text-light">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Tu correo electrónico"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="motivo" class="form-label text-light">Motivo</label>
+                <select class="form-select" id="motivo" required>
+                  <option value="" selected disabled>
+                    Selecciona un motivo
+                  </option>
+                  <option value="consulta">Consulta</option>
+                  <option value="sugerencia">Sugerencia</option>
+                  <option value="reclamo">Reclamo</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="mensaje" class="form-label text-light"
+                  >Mensaje</label
+                >
+                <textarea
+                  class="form-control"
+                  id="mensaje"
+                  rows="3"
+                  placeholder="Escribe tu mensaje aquí"
+                  required
+                ></textarea>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Footer inferior -->
+          <div
+            class="d-flex flex-column flex-sm-row justify-content-between py-3 border-top"
+          >
+            <p class="text-light mb-0">
+              &copy; 2025 Maximus Gym. Todos los derechos reservados.
+            </p>
+            <ul class="list-unstyled d-flex">
+              <li class="ms-3">
+                <a href="#" class="text-warning"
+                  ><i class="bi bi-instagram fs-3"></i
+                ></a>
+              </li>
+              <li class="ms-3">
+                <a href="#" class="text-primary"
+                  ><i class="bi bi-facebook fs-3"></i
+                ></a>
+              </li>
+              <li class="ms-3">
+                <a href="#" class="text-danger"
+                  ><i class="bi bi-youtube fs-3"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
