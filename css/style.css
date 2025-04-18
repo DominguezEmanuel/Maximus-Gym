@@ -126,3 +126,53 @@
 .testimonial-img {
   transition: transform 0.3s ease;
 }
+
+/*Galería Masonry*/
+.grid {
+  margin: 0 auto;
+}
+
+.grid-item {
+  width: 100%;
+  max-width: 32%;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border: none;
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.grid-item img:hover {
+  transform: scale(1.1);
+}
+
+/* Ajuste responsive */
+@media (max-width: 992px) {
+  .grid-item {
+    max-width: 48%;
+  }
+}
+
+@media (max-width: 576px) {
+  .grid-item {
+    max-width: 100%;
+  }
+}
+
+/* Resaltado en la tabla de horarios */
+/* Estilo base para las celdas de la tabla */
+#tabla-horarios td {
+  transition: background-color 0.6s ease, color 0.6s ease;
+}
+
+.resaltado {
+  background-color: #ffc107 !important;
+  color: #212529;
+  font-weight: bold;
+}

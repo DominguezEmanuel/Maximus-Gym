@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maximus Gym</title>
+    <!--Favicon-->
+    <link rel="icon" href="images/favicon.png" type="image/png" />
+    <!--CSS-Bootstrap-->
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <!--Bootstrap-Icons-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!--Inicio-Navbar-->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand me-auto font-monospace" href="#">Maximus Gym</a>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header bg-success">
+            <h5
+              class="offcanvas-title font-monospace"
+              id="offcanvasNavbarLabel"
+            >
+              Maximus Gym
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul
+              class="navbar-nav justify-content-center flex-grow-1 pe-3 font-monospace"
+            >
+              <li class="nav-item">
+                <a
+                  class="nav-link text-light mx-lg-2"
+                  aria-current="page"
+                  href="index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light mx-lg-2" href="nosotros.html"
+                  >Nosotros</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link active dropdown-toggle text-light mx-lg-2"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Servicios
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="clases.html">Clases</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="entrenadores.html"
+                      >Entrenadores</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="precios.html">Precios</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light mx-lg-2" href="blog.html">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light mx-lg-2" href="contacto.html"
+                  >Contacto</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <a href="#" class="login-button font-monospace">Acceder</a>
+        <button
+          class="navbar-toggler pe-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span
+            class="navbar-toggler-icon bg-success"
+            style="border-radius: 5px"
+          ></span>
+        </button>
+      </div>
+    </nav>
+    <!--Fin-Navbar-->
+    <!--Seccion Hero-->
+    <div class="hero-container position-relative vh-100 mb-5">
+      <video
+        class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover z-1"
+        autoplay
+        muted
+        loop
+        playsinline
+      >
+        <source src="media/hero.mp4" type="video/mp4" />
+        Tu navegador no soporta videos en HTML5.
+      </video>
+      <!-- Overlay oscuro -->
+      <div
+        id="hero-overlay"
+        class="position-absolute top-0 start-0 w-100 h-100 bg-dark z-0"
+        style="opacity: 0"
+      ></div>
+
+      <!-- Contenido centrado -->
+      <div
+        class="hero-content position-relative z-2 h-100 d-flex align-items-center justify-content-center"
+      >
+        <div class="inicio-seccion text-center">
+          <div class="info">
+            <h1
+              class="text-light fw-bolder font-monospace"
+              style="font-size: 4rem"
+            >
+              ¡ENTRENA <span class="text-success">DURO</span>!
+            </h1>
+            <p class="text-light fs-4 font-monospace">
+              ¡Sangre, sudor y gloria!
+            </p>
+          </div>
+          <a href="#precios" class="button text-decoration-none font-monospace">
+            Saber más...
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--Fin Hero-->
+    <!--Clases-->
+    <div class="font-monospace text-center mb-5">
+      <h1 class="text-success fw-bolder">
+        Nuestras Clases<span class="fs-1">🎖️​</span>
+      </h1>
+      <p class="lh-1">
+        Descubre la variedad de entrenamientos que ofrecemos y encuentra la
+        clase perfecta para alcanzar tus objetivos.
+      </p>
+    </div>
+    <section class="container my-5">
+      <!-- Filtro de tipo de ejercicio -->
+      <div class="container mb-5">
+        <div class="d-flex flex-column align-items-center">
+          <div class="input-group w-auto">
+            <span class="input-group-text bg-success"
+              ><i class="bi bi-funnel-fill"></i
+            ></span>
+            <select
+              id="filtro-ejercicio"
+              class="form-select bg-dark text-light text-center font-monospace"
+            >
+              <option value="todos">Todos</option>
+              <option value="Fuerza">Fuerza</option>
+              <option value="Cardio">Cardio</option>
+              <option value="Flexibilidad">Flexibilidad</option>
+              <option value="Baile">Baile</option>
+              <option value="Coordinación">Coordinación</option>
+              <option value="Bajo impacto">Bajo impacto</option>
+              <option value="Tonificación">Tonificación</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 g-4 border border-0">
+        <!-- Clase 1 -->
+        <div class="col border border-0">
+          <div class="card h-100 shadow-sm">
+            <img
+              src="images/ejercicios/crossfit.jpg"
+              class="card-img-top"
+              alt="Clase de Crossfit"
+            />
+            <div class="card-body">
+              <h5 class="card-title">CrossFit</h5>
+              <span class="badge bg-danger mb-2">Fuerza</span>
+              <p class="card-text">
+                Entrenamiento funcional de alta intensidad que mejora
+                resistencia y fuerza.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Clase 2 -->
+        <div class="col border border-0">
+          <div class="card h-100 shadow-sm">
+            <img
+              src="images/ejercicios/zumba.jpg"
+              class="card-img-top"
+              alt="Clase de Zumba"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Zumba</h5>
+              <span class="badge bg-success mb-2">Cardio</span>
+              <span class="badge bg-info mb-2">Baile</span>
+              <p class="card-text">
+                Clase de baile con ritmos latinos para quemar calorías y mejorar
+                coordinación.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Clase 3 -->
+        <div class="col border border-0">
+          <div class="card h-100 shadow-sm">
+            <img
+              src="images/ejercicios/yoga.jpg"
+              class="card-img-top"
+              alt="Clase de Yoga"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Yoga</h5>
+              <span class="badge bg-primary mb-2">Flexibilidad</span>
+              <p class="card-text">
+                Mejora la postura, reduce el estrés y trabaja la conexión
+                cuerpo-mente.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!--Clase 4-->
+        <div class="col border border-0">
+          <div class="card h-100 shadow-sm">
+            <img
+              src="images/ejercicios/body-pump.jpg"
+              class="card-img-top"
+              alt="Clase de Body Pump"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Body Pump</h5>
+              <span class="badge bg-danger mb-2">Fuerza</span>
+              <p class="card-text">
+                Uso de pesas y barras para tonificar todo el cuerpo.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!--Clase 5-->
+        <div class="col border border-0">
+          <div class="card h-100 shadow-sm">
+            <img
+              src="images/ejercicios/spinning.jpg"
+              class="card-img-top"
+              alt="Clase de Spinning"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Spinning</h5>
+              <span class="badge bg-success mb-2">Cardio</span>
+              <p class="card-text">
+                Bicicleta fija al ritmo de la música, mejora la resistencia
+                cardiovascular.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!--Clase 6-->
+        <div class="col border border-0">
+          <div class="card h-100 shadow-sm">
+            <img
+              src="images/ejercicios/pilates.jpg"
+              class="card-img-top"
+              alt="Clase de Pilates"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Pilates</h5>
+              <span class="badge bg-danger mb-2">Fuerza</span>
+              <span class="badge bg-primary mb-2">Flexibilidad</span>
+              <p class="card-text">
+                Mejora postura, flexibilidad y fortalece el core.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!--Clase 7-->
+        <div class="col border border-0">
+          <div class="card h-100 shadow-sm">
+            <img
+              src="images/ejercicios/boxeo.jpg"
+              class="card-img-top"
+              alt="Clase de Boxeo"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Boxeo</h5>
+              <span class="badge bg-success mb-2">Cardio</span>
+              <span class="badge bg-warning mb-2">Coordinación</span>
+              <p class="card-text">
+                Mejora la resistencia, la coordinación y libera estrés.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!--Clase 8-->
+        <div class="col border border-0">
+          <div class="card h-100 shadow-sm">
+            <img
+              src="images/ejercicios/aqua-gym.jpg"
+              class="card-img-top"
+              alt="Clase de Aqua Gym"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Aqua Gym</h5>
+              <span class="badge bg-success mb-2">Cardio</span>
+              <span class="badge bg-dark mb-2">Bajo impacto</span>
+              <p class="card-text">
+                Ejercicio aeróbico en el agua, ideal para personas con lesiones
+                o de edad avanzada.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!--Clase 9-->
+        <div class="col border border-0">
+          <div class="card h-100 shadow-sm">
+            <img
+              src="images/ejercicios/gap.jpg"
+              class="card-img-top"
+              alt="Clase de GAP"
+            />
+            <div class="card-body">
+              <h5 class="card-title">GAP</h5>
+              <span class="badge bg-black mb-2">Tonificación</span>
+              <p class="card-text">
+                Rutina específica para trabajar estas tres zonas del cuerpo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Fin Clases-->
+    <!--Galería Masonry-->
+    <div class="font-monospace text-center mb-5">
+      <h1 class="text-success fw-bolder">
+        Momentos Especiales<span class="fs-1">📸​</span>
+      </h1>
+      <p class="lh-1">
+        Explora imágenes de nuestras clases, entrenamientos, eventos y la
+        energía que nos impulsa cada día. Si quieres algo más informal,
+        motivacional o técnico, dime el estilo que prefieres y te doy otras
+        opciones.
+      </p>
+    </div>
+    <div class="container my-5">
+      <div
+        class="grid d-flex flex-wrap justify-content-between bg-dark border border-danger border-5 rounded"
+      >
+        <div class="grid-item">
+          <img src="images/galeria/f1.jpg" alt="Ejercicio 1" />
+        </div>
+        <div class="grid-item">
+          <img class="mb-5" src="images/galeria/f2.jpg" alt="Ejercicio 2" />
+          <img src="images/galeria/f8.jpg" alt="Ejercicio 8" />
+        </div>
+        <div class="grid-item">
+          <img class="mb-5" src="images/galeria/f3.jpg" alt="Ejercicio 3" />
+          <img src="images/galeria/f9.jpg" alt="Ejercicio 9" />
+        </div>
+        <div class="grid-item">
+          <img src="images/galeria/f4.jpg" alt="Ejercicio 4" />
+        </div>
+        <div class="grid-item">
+          <img class="mb-5" src="images/galeria/f5.jpg" alt="Ejercicio 5" />
+          <img src="images/galeria/f7.jpg" alt="Ejercicio 7" />
+        </div>
+        <div class="grid-item">
+          <img src="images/galeria/f6.jpg" alt="Ejercicio 6" />
+        </div>
+      </div>
+    </div>
+    <!--Fin Galería-->
+    <!--Horarios-->
+    <div class="font-monospace text-center mb-5">
+      <h1 class="text-success fw-bolder">
+        Horarios de Clases<span class="fs-1">🕒​​</span>
+      </h1>
+      <p class="lh-1">
+        Consulta los horarios de tus clases favoritas y elige el momento ideal
+        para entrenar.
+      </p>
+    </div>
+    <div class="container mb-5">
+      <div class="d-flex flex-column align-items-center">
+        <div class="input-group w-auto">
+          <span class="input-group-text bg-success">
+            <i class="bi bi-funnel-fill"></i>
+          </span>
+          <select
+            id="filtro-clase"
+            class="form-select bg-dark text-light text-center font-monospace"
+          >
+            <option selected disabled>Elija una clase</option>
+            <option value="crossfit">Crossfit</option>
+            <option value="zumba">Zumba</option>
+            <option value="yoga">Yoga</option>
+            <option value="body-pump">Body Pump</option>
+            <option value="spinning">Spinning</option>
+            <option value="pilates">Pilates</option>
+            <option value="boxeo">Boxeo</option>
+            <option value="aqua-gym">Aqua Gym</option>
+            <option value="gap">GAP</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="table-responsive-sm">
+        <table
+          class="table table-striped table-hover text-center align-middle"
+          id="tabla-horarios"
+        >
+          <thead class="table-success">
+            <tr>
+              <th>Hora/Días</th>
+              <th>Lunes</th>
+              <th>Martes</th>
+              <th>Miércoles</th>
+              <th>Jueves</th>
+              <th>Viernes</th>
+              <th>Sábado</th>
+              <th>Domingo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="table-warning">6:00am - 7:00am</td>
+              <td class="spinning"><span>Spinning</span><br />Marc Allen</td>
+              <td class="boxeo"><span>Boxeo</span><br />Leo Torres</td>
+              <td class="yoga"><span>Yoga</span><br />James Alien</td>
+              <td class="crossfit"><span>Crossfit</span><br />Adam Phillips</td>
+              <td class="gap"><span>GAP</span><br />Julia Scott</td>
+              <td></td>
+              <td class="zumba"><span>Zumba</span><br />Sofia Rivera</td>
+            </tr>
+            <tr>
+              <td class="table-warning">7:00am - 8:00am</td>
+              <td class="crossfit"><span>Crossfit</span><br />Adam Phillips</td>
+              <td class="zumba"><span>Zumba</span><br />Sofia Rivera</td>
+              <td class="gap"><span>GAP</span><br />Julia Scott</td>
+              <td></td>
+              <td class="aqua-gym"><span>Aqua Gym</span><br />Kevin Waters</td>
+              <td></td>
+              <td class="yoga"><span>Yoga</span><br />James Alien</td>
+            </tr>
+            <tr>
+              <td class="table-warning">10:00am - 11:00am</td>
+              <td class="body-pump">
+                <span>Body Pump</span><br />Rachel Green
+              </td>
+              <td class="pilates"><span>Pilates</span><br />Linda Clark</td>
+              <td></td>
+              <td class="yoga"><span>Yoga</span><br />James Alien</td>
+              <td class="spinning"><span>Spinning</span><br />Marc Allen</td>
+              <td class="crossfit"><span>Crossfit</span><br />Adam Phillips</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="table-warning">13:00pm - 14:00pm</td>
+              <td></td>
+              <td class="aqua-gym"><span>Aqua Gym</span><br />Kevin Waters</td>
+              <td class="pilates"><span>Pilates</span><br />Linda Clark</td>
+              <td class="boxeo"><span>Boxeo</span><br />Leo Torres</td>
+              <td class="gap"><span>GAP</span><br />Julia Scott</td>
+              <td></td>
+              <td class="zumba"><span>Zumba</span><br />Sofia Rivera</td>
+            </tr>
+            <tr>
+              <td class="table-warning">17:00pm - 18:00pm</td>
+              <td class="spinning"><span>Spinning</span><br />Marc Allen</td>
+              <td class="yoga"><span>Yoga</span><br />James Alien</td>
+              <td class="crossfit"><span>Crossfit</span><br />Adam Phillips</td>
+              <td></td>
+              <td class="body-pump">
+                <span>Body Pump</span><br />Rachel Green
+              </td>
+              <td></td>
+              <td class="zumba"><span>Zumba</span><br />Sofia Rivera</td>
+            </tr>
+            <tr>
+              <td class="table-warning">18:00pm - 19:00pm</td>
+              <td class="boxeo"><span>Boxeo</span><br />Leo Torres</td>
+              <td class="gap"><span>GAP</span><br />Julia Scott</td>
+              <td class="pilates"><span>Pilates</span><br />Linda Clark</td>
+              <td class="zumba"><span>Zumba</span><br />Sofia Rivera</td>
+              <td class="yoga"><span>Yoga</span><br />James Alien</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="table-warning">19:00pm - 20:00pm</td>
+              <td></td>
+              <td class="body-pump">
+                <span>Body Pump</span><br />Rachel Green
+              </td>
+              <td class="crossfit"><span>Crossfit</span><br />Adam Phillips</td>
+              <td></td>
+              <td class="aqua-gym"><span>Aqua Gym</span><br />Kevin Waters</td>
+              <td class="spinning"><span>Spinning</span><br />Marc Allen</td>
+              <td class="boxeo"><span>Boxeo</span><br />Leo Torres</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!--Fin Horarios-->
+    <!--Footer-->
+    <div class="container-fluid bg-dark mt-5">
+      <footer class="py-4">
+        <div class="row row-cols-1 row-cols-md-4 justify-content-center">
+          <!-- Logo -->
+          <div class="col mb-3 text-center font-monospace" style="border: none">
+            <h5 class="text-light mb-3">Maximus Gym</h5>
+            <img
+              src="images/logo.png"
+              alt="Maximus Gym Logo"
+              class="img-fluid"
+              style="max-width: 250px"
+            />
+            <p class="text-light mt-2">
+              ¡Tu mejor opción para entrenar!<span class="fs-3">🏋🏽‍♂️​</span>
+            </p>
+          </div>
+
+          <!-- Menú -->
+          <div class="col mb-3 text-center font-monospace" style="border: none">
+            <h5 class="text-light mb-3">Menú</h5>
+            <ul class="nav flex-column text-center">
+              <li class="nav-item mb-2">
+                <a href="index.html" class="nav-link p-0 text-light">Inicio</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="nosotros.html" class="nav-link p-0 text-light"
+                  >Nosotros</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="clases.html" class="nav-link p-0 text-light">Clases</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="entrenadores.html" class="nav-link p-0 text-light"
+                  >Entrenadores</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="precios.html" class="nav-link p-0 text-light"
+                  >Precios</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="blog.html" class="nav-link p-0 text-light">Blog</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="contacto.html" class="nav-link p-0 text-light"
+                  >Contacto</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Mapa -->
+          <div class="col mb-3 font-monospace" style="border: none">
+            <h5 class="text-light text-center mb-3">
+              Ubicación<span class="fs-3">📌​</span>
+            </h5>
+            <div
+              class="ratio ratio-4x3"
+              style="max-width: 300px; margin: 0 auto"
+            >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d-122.41941548468132!3d37.77492927975971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f1a8c7b1%3A0x4c8b0c3c8b0c3c8b!2sMaximus%20Gym!5e0!3m2!1ses!2sus!4v1681234567890!5m2!1ses!2sus"
+                width="200"
+                height="150"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="col mb-3 font-monospace" style="border: none">
+            <h5 class="text-light text-center mb-3">
+              Contáctanos<span class="fs-3">​✉️​</span>
+            </h5>
+            <form id="contactForm">
+              <div class="mb-3">
+                <label for="email" class="form-label text-light">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Tu correo electrónico"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Por favor, ingresa un correo válido.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="motivo" class="form-label text-light">Motivo</label>
+                <select class="form-select" id="motivo" required>
+                  <option value="" selected disabled>
+                    Selecciona un motivo
+                  </option>
+                  <option value="consulta">Consulta</option>
+                  <option value="sugerencia">Sugerencia</option>
+                  <option value="reclamo">Reclamo</option>
+                </select>
+                <div class="invalid-feedback">
+                  Por favor, selecciona un motivo.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="mensaje" class="form-label text-light"
+                  >Mensaje</label
+                >
+                <textarea
+                  class="form-control"
+                  id="mensaje"
+                  rows="3"
+                  placeholder="Escribe tu mensaje aquí"
+                  required
+                ></textarea>
+                <div class="invalid-feedback">
+                  Por favor, escribe tu mensaje.
+                </div>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-success">
+                  <span
+                    id="spinner"
+                    class="spinner-border spinner-border-sm d-none"
+                    role="status"
+                    aria-hidden="true"
+                  ></span>
+                  Enviar
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Footer inferior -->
+          <div
+            class="bg-dark text-light py-3 border-top w-100"
+            style="border: none"
+          >
+            <div
+              class="container d-flex flex-column flex-sm-row justify-content-between"
+            >
+              <p class="mb-0">
+                &copy; 2025 Maximus Gym. Todos los derechos reservados.
+              </p>
+              <ul class="list-unstyled d-flex mt-3 footer-icons">
+                <li class="ms-3">
+                  <a href="#" class="text-light"
+                    ><i class="bi bi-instagram fs-3"></i
+                  ></a>
+                </li>
+                <li class="ms-3">
+                  <a href="#" class="text-light"
+                    ><i class="bi bi-facebook fs-3"></i
+                  ></a>
+                </li>
+                <li class="ms-3">
+                  <a href="#" class="text-light"
+                    ><i class="bi bi-youtube fs-3"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!--Fin Footer-->
+    <!--JS-Bootstrap-->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!--JS-->
+    <script src="js/main.js"></script>
+    <!--JS para filtrar las clases-->
+    <script src="js/filtro-clases.js"></script>
+    <!--JS para galería Masonry-->
+    <script src="js/masonry.js"></script>
+  </body>
+</html>
