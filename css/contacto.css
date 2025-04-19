@@ -5,3 +5,10 @@ body {
   background-position: top center;
   background-repeat: no-repeat;
 }
+
+@media (max-width: 768px) {
+  body {
+    background-size: contain; /* Ajusta el tamaño del fondo para que se adapte */
+    background-position: center; /* Centra el fondo */
+  }
+}
