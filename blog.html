@@ -1,1 +1,488 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maximus Gym</title>
+    <!--Favicon-->
+    <link rel="icon" href="images/favicon.png" type="image/png" />
+    <!--CSS-Bootstrap-->
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <!--Bootstrap-Icons-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/blog.css" />
+  </head>
+  <body>
+    <!--Inicio-Navbar-->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand me-auto font-monospace" href="#">Maximus Gym</a>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header bg-success">
+            <h5
+              class="offcanvas-title font-monospace"
+              id="offcanvasNavbarLabel"
+            >
+              Maximus Gym
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul
+              class="navbar-nav justify-content-center flex-grow-1 pe-3 font-monospace"
+            >
+              <li class="nav-item">
+                <a
+                  class="nav-link text-light mx-lg-2"
+                  aria-current="page"
+                  href="index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled text-light mx-lg-2" href="#"
+                  >Nosotros</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-light mx-lg-2"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Servicios
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="clases.html">Clases</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="entrenadores.html"
+                      >Entrenadores</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="precios.html">Precios</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-light mx-lg-2" href="blog.html"
+                  >Blog</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light mx-lg-2" href="contacto.html"
+                  >Contacto</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <a href="#" class="login-button font-monospace">Acceder</a>
+        <button
+          class="navbar-toggler pe-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span
+            class="navbar-toggler-icon bg-success"
+            style="border-radius: 5px"
+          ></span>
+        </button>
+      </div>
+    </nav>
+    <!--Fin-Navbar-->
+    <br /><br /><br /><br />
+    <!-- Contenedor general -->
+    <div class="container my-5">
+      <div class="font-monospace text-center mb-5">
+        <h1 class="text-success fw-bolder">
+          Blog Fitness<span class="fs-1">🤩​​</span>
+        </h1>
+        <p class="lh-1">
+          Descubre la variedad de artículos que ofrecemos e informate sobre lo
+          que más te guste para llegar a tu objetivo.
+        </p>
+      </div>
 
+      <!-- Botones de filtro (opcional, para jQuery) -->
+      <div class="text-center mb-4">
+        <button
+          class="btn btn-outline-primary me-2 filter-btn mt-2"
+          data-filter="all"
+        >
+          Todos
+        </button>
+        <button
+          class="btn btn-outline-success me-2 filter-btn mt-2"
+          data-filter="entrenamiento"
+        >
+          Entrenamiento
+        </button>
+        <button
+          class="btn btn-outline-danger me-2 filter-btn mt-2"
+          data-filter="nutrición"
+        >
+          Nutrición
+        </button>
+        <button
+          class="btn btn-outline-warning me-2 filter-btn mt-2"
+          data-filter="motivación"
+        >
+          Motivación
+        </button>
+        <button
+          class="btn btn-outline-info me-2 filter-btn mt-2"
+          data-filter="salud"
+        >
+          Salud
+        </button>
+        <button
+          class="btn btn-outline-secondary me-2 filter-btn mt-2"
+          data-filter="estilo-vida"
+        >
+          Estilo de Vida
+        </button>
+      </div>
+
+      <!-- Grid de artículos -->
+      <div class="blog-revista-grid">
+        <div class="article-card tag-entrenamiento tag-salud">
+          <img
+            src="images/blog/full-body.jpg"
+            class="img-fluid rounded"
+            alt="Entrenamiento"
+          />
+          <h5 class="mt-2">Rutina Full Body para Principiantes</h5>
+          <p>Un plan de 4 semanas para iniciar con fuerza.</p>
+        </div>
+
+        <div class="article-card tag-salud tag-motivación">
+          <img
+            src="images/blog/meditacion.jpg"
+            class="img-fluid rounded"
+            alt="Meditación"
+          />
+          <h5 class="mt-2">Meditación para Reducir el Estrés Diario</h5>
+          <p>
+            Conectá con vos mismo a través de la respiración y el silencio.
+            Dedicá 10 minutos al día para relajar tu mente.
+          </p>
+        </div>
+
+        <div class="article-card tag-nutrición tag-estilo-vida">
+          <img
+            src="images/blog/desayuno.jpg"
+            class="img-fluid rounded"
+            alt="Desayuno Saludable"
+          />
+          <h5 class="mt-2">Desayunos energéticos para las mañanas</h5>
+          <p>
+            Comenzá tus mañanas con comidas balanceadas que te mantendrán activo
+            durante todo el día.
+          </p>
+        </div>
+
+        <div class="article-card tag-salud tag-estilo-vida">
+          <img
+            src="images/blog/descanso-activo.jpg"
+            class="img-fluid rounded"
+            alt="Descanso activo"
+          />
+          <h5 class="mt-2">El Poder del Descanso Activo</h5>
+          <p>
+            Aprendé a usar días de recuperación sin dejar de moverte y cuidar tu
+            cuerpo.
+          </p>
+        </div>
+
+        <div class="article-card tag-motivación">
+          <img
+            src="images/blog/bloqueos-mentales.jpg"
+            class="img-fluid rounded"
+            alt="Motivación mental"
+          />
+          <h5 class="mt-2">Superá tus Bloqueos Mentales</h5>
+          <p>
+            Descubrí estrategias para salir de la zona de confort y mantenerte
+            enfocado en tu progreso.
+          </p>
+        </div>
+
+        <div class="article-card tag-salud">
+          <img
+            src="images/blog/hidratacion.jpg"
+            class="img-fluid rounded"
+            alt="Salud"
+          />
+          <h5 class="mt-2">La hidratación y la salud</h5>
+          <p>
+            Aprende lo importante que es beber agua para tu salud y bienestar.
+          </p>
+        </div>
+
+        <div class="article-card tag-nutrición tag-salud">
+          <img
+            src="images/blog/nutricion.jpg"
+            class="img-fluid rounded"
+            alt="Nutrición"
+          />
+          <h5 class="mt-2">Comidas que Aumentan tu Energía</h5>
+          <p>Alimentos que mejoran tu rendimiento físico y mental.</p>
+        </div>
+
+        <div class="article-card tag-motivación tag-estilo-vida">
+          <img
+            src="images/blog/motivacion.jpg"
+            class="img-fluid rounded"
+            alt="Motivación"
+          />
+          <h5 class="mt-2">Cómo Mantener la Motivación</h5>
+          <p>Tips para no rendirte en el proceso de cambio.</p>
+        </div>
+
+        <div class="article-card tag-entrenamiento">
+          <img
+            src="images/blog/ejercicios-cortos.jpg"
+            class="img-fluid rounded"
+            alt="HIIT"
+          />
+          <h5 class="mt-2">HIIT: Ejercicios Cortos y Efectivos</h5>
+          <p>Entrenamientos que queman más en menos tiempo.</p>
+        </div>
+
+        <div class="article-card tag-estilo-vida tag-entrenamiento">
+          <img
+            src="images/blog/estilo-vida.jpg"
+            class="img-fluid rounded"
+            alt="Estilo-Vida"
+          />
+          <h5 class="mt-2">Hacé un cambio</h5>
+          <p>Cambiar los hábitos es el primer paso para mejorar.</p>
+        </div>
+
+        <div class="article-card tag-nutrición tag-salud">
+          <img
+            src="images/blog/comida-nutritiva.jpg"
+            class="img-fluid rounded"
+            alt="Snacks"
+          />
+          <h5 class="mt-2">Comida saludable para todo el día</h5>
+          <p>Ideas prácticas y deliciosas para tu rutina diaria.</p>
+        </div>
+
+        <div class="article-card tag-motivación">
+          <img
+            src="images/blog/frases.jpg"
+            class="img-fluid rounded"
+            alt="Motivación Gym"
+          />
+          <h5 class="mt-2">Frases que Inspiran</h5>
+          <p>Mantén la motivación encendida con estas frases.</p>
+        </div>
+      </div>
+    </div>
+    <!--Footer-->
+    <div class="container-fluid bg-dark mt-5">
+      <footer class="py-4">
+        <div class="row row-cols-1 row-cols-md-4 justify-content-center">
+          <!-- Logo -->
+          <div class="col mb-3 text-center font-monospace" style="border: none">
+            <h5 class="text-light mb-3">Maximus Gym</h5>
+            <img
+              src="images/logo.png"
+              alt="Maximus Gym Logo"
+              class="img-fluid"
+              style="max-width: 250px"
+            />
+            <p class="text-light mt-2">
+              ¡Tu mejor opción para entrenar!<span class="fs-3">🏋🏽‍♂️​</span>
+            </p>
+          </div>
+
+          <!-- Menú -->
+          <div class="col mb-3 text-center font-monospace" style="border: none">
+            <h5 class="text-light mb-3">Menú</h5>
+            <ul class="nav flex-column text-center">
+              <li class="nav-item mb-2">
+                <a href="index.html" class="nav-link p-0 text-light">Inicio</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="nosotros.html" class="nav-link p-0 text-light"
+                  >Nosotros</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="clases.html" class="nav-link p-0 text-light">Clases</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="entrenadores.html" class="nav-link p-0 text-light"
+                  >Entrenadores</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="precios.html" class="nav-link p-0 text-light"
+                  >Precios</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="blog.html" class="nav-link p-0 text-light">Blog</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="contacto.html" class="nav-link p-0 text-light"
+                  >Contacto</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Mapa -->
+          <div class="col mb-3 font-monospace" style="border: none">
+            <h5 class="text-light text-center mb-3">
+              Ubicación<span class="fs-3">📌​</span>
+            </h5>
+            <div
+              class="ratio ratio-4x3"
+              style="max-width: 300px; margin: 0 auto"
+            >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d-122.41941548468132!3d37.77492927975971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f1a8c7b1%3A0x4c8b0c3c8b0c3c8b!2sMaximus%20Gym!5e0!3m2!1ses!2sus!4v1681234567890!5m2!1ses!2sus"
+                width="200"
+                height="150"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="col mb-3 font-monospace" style="border: none">
+            <h5 class="text-light text-center mb-3">
+              Contáctanos<span class="fs-3">​✉️​</span>
+            </h5>
+            <form id="contactForm">
+              <div class="mb-3">
+                <label for="email" class="form-label text-light">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Tu correo electrónico"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Por favor, ingresa un correo válido.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="motivo" class="form-label text-light">Motivo</label>
+                <select class="form-select" id="motivo" required>
+                  <option value="" selected disabled>
+                    Selecciona un motivo
+                  </option>
+                  <option value="consulta">Consulta</option>
+                  <option value="sugerencia">Sugerencia</option>
+                  <option value="reclamo">Reclamo</option>
+                </select>
+                <div class="invalid-feedback">
+                  Por favor, selecciona un motivo.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="mensaje" class="form-label text-light"
+                  >Mensaje</label
+                >
+                <textarea
+                  class="form-control"
+                  id="mensaje"
+                  rows="3"
+                  placeholder="Escribe tu mensaje aquí"
+                  required
+                ></textarea>
+                <div class="invalid-feedback">
+                  Por favor, escribe tu mensaje.
+                </div>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-success">
+                  <span
+                    id="spinner-footer"
+                    class="spinner-border spinner-border-sm d-none"
+                    role="status"
+                    aria-hidden="true"
+                  ></span>
+                  Enviar
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Footer inferior -->
+          <div
+            class="bg-dark text-light py-3 border-top w-100"
+            style="border: none"
+          >
+            <div
+              class="container d-flex flex-column flex-sm-row justify-content-between"
+            >
+              <p class="mb-0">
+                &copy; 2025 Maximus Gym. Todos los derechos reservados.
+              </p>
+              <ul class="list-unstyled d-flex mt-3 footer-icons">
+                <li class="ms-3">
+                  <a href="#" class="text-light"
+                    ><i class="bi bi-instagram fs-3"></i
+                  ></a>
+                </li>
+                <li class="ms-3">
+                  <a href="#" class="text-light"
+                    ><i class="bi bi-facebook fs-3"></i
+                  ></a>
+                </li>
+                <li class="ms-3">
+                  <a href="#" class="text-light"
+                    ><i class="bi bi-youtube fs-3"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!--Fin Footer-->
+    <!--JS-Bootstrap-->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!--JS-->
+    <script src="js/main.js"></script>
+    <script src="js/filtro-blog.js"></script>
+  </body>
+</html>
