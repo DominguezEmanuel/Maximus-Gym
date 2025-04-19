@@ -90,9 +90,9 @@ $(document).ready(function () {
 
     // Si el formulario es válido, mostrar spinner
     if (isValid) {
-      $("#spinner").removeClass("d-none"); // Mostrar spinner
+      $("#spinner-footer").removeClass("d-none"); // Mostrar spinner
       setTimeout(function () {
-        $("#spinner").addClass("d-none"); // Ocultar spinner después de 2 segundos
+        $("#spinner-footer").addClass("d-none"); // Ocultar spinner después de 2 segundos
         alert("Formulario enviado con éxito."); // Mensaje de éxito
         $("#contactForm")[0].reset(); // Reiniciar formulario
       }, 2000);

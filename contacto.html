@@ -207,7 +207,7 @@
               style="background-color: #f0f0f0"
               required
             >
-              <option selected disabled>Selecciona un motivo</option>
+              <option value="" selected disabled>Selecciona un motivo</option>
               <option value="consulta">Consulta</option>
               <option value="sugerencia">Sugerencia</option>
               <option value="reclamo">Reclamo</option>
@@ -363,11 +363,13 @@
             </h5>
             <form id="contactForm">
               <div class="mb-3">
-                <label for="email" class="form-label text-light">Email</label>
+                <label for="email-footer" class="form-label text-light"
+                  >Email</label
+                >
                 <input
                   type="email"
                   class="form-control"
-                  id="email"
+                  id="email-footer"
                   placeholder="Tu correo electrónico"
                   required
                 />
@@ -376,8 +378,10 @@
                 </div>
               </div>
               <div class="mb-3">
-                <label for="motivo" class="form-label text-light">Motivo</label>
-                <select class="form-select" id="motivo" required>
+                <label for="motivo-footer" class="form-label text-light"
+                  >Motivo</label
+                >
+                <select class="form-select" id="motivo-footer" required>
                   <option value="" selected disabled>
                     Selecciona un motivo
                   </option>
@@ -390,12 +394,12 @@
                 </div>
               </div>
               <div class="mb-3">
-                <label for="mensaje" class="form-label text-light"
+                <label for="mensaje-footer" class="form-label text-light"
                   >Mensaje</label
                 >
                 <textarea
                   class="form-control"
-                  id="mensaje"
+                  id="mensaje-footer"
                   rows="3"
                   placeholder="Escribe tu mensaje aquí"
                   required
@@ -407,7 +411,7 @@
               <div class="text-center">
                 <button type="submit" class="btn btn-success">
                   <span
-                    id="spinner"
+                    id="spinner-footer"
                     class="spinner-border spinner-border-sm d-none"
                     role="status"
                     aria-hidden="true"
