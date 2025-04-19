@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maximus Gym</title>
+    <!--Favicon-->
+    <link rel="icon" href="images/favicon.png" type="image/png" />
+    <!--CSS-Bootstrap-->
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <!--Bootstrap-Icons-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/contacto.css" />
+  </head>
+  <body>
+    <!--Inicio-Navbar-->
+    <nav class="navbar navbar-expand-lg fixed-top mb-3">
+      <div class="container-fluid">
+        <a class="navbar-brand me-auto font-monospace" href="#">Maximus Gym</a>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header bg-success">
+            <h5
+              class="offcanvas-title font-monospace"
+              id="offcanvasNavbarLabel"
+            >
+              Maximus Gym
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul
+              class="navbar-nav justify-content-center flex-grow-1 pe-3 font-monospace"
+            >
+              <li class="nav-item">
+                <a
+                  class="nav-link text-light mx-lg-2"
+                  aria-current="page"
+                  href="index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light mx-lg-2" href="nosotros.html"
+                  >Nosotros</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-light mx-lg-2"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Servicios
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="clases.html">Clases</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="entrenadores.html"
+                      >Entrenadores</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="precios.html">Precios</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light mx-lg-2" href="blog.html">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active text-light mx-lg-2"
+                  href="contacto.html"
+                  >Contacto</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <a href="#" class="login-button font-monospace">Acceder</a>
+        <button
+          class="navbar-toggler pe-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span
+            class="navbar-toggler-icon bg-success"
+            style="border-radius: 5px"
+          ></span>
+        </button>
+      </div>
+    </nav>
+    <!--Fin-Navbar-->
+    <br /><br /><br />
+    <!--Formulario Contacto-->
+    <div
+      class="container my-5"
+      id="formulario-container"
+      style="margin-top: 250px"
+    >
+      <form id="formularioContacto" novalidate>
+        <div class="row g-3">
+          <div class="col-md-6 border border-0 text-light">
+            <label for="nombre" class="form-label font-monospace">Nombre</label>
+            <input
+              type="text"
+              class="form-control border border-0"
+              id="nombre"
+              style="background-color: #f0f0f0"
+              required
+            />
+            <div class="invalid-feedback text-danger">
+              Por favor ingresa tu nombre
+            </div>
+          </div>
+          <div class="col-md-6 border border-0 text-light">
+            <label for="apellido" class="form-label font-monospace"
+              >Apellido</label
+            >
+            <input
+              type="text"
+              class="form-control border border-0"
+              id="apellido"
+              style="background-color: #f0f0f0"
+              required
+            />
+            <div class="invalid-feedback text-danger">
+              Por favor ingresa tu apellido
+            </div>
+          </div>
+
+          <div class="col-12 border border-0 text-light">
+            <label for="email" class="form-label font-monospace"
+              >Correo electrónico</label
+            >
+            <input
+              type="email"
+              class="form-control border border-0"
+              id="email"
+              style="background-color: #f0f0f0"
+              required
+            />
+            <div class="invalid-feedback text-danger">
+              Por favor ingresa un correo válido
+            </div>
+          </div>
+
+          <div class="col-12 font-monospace border border-0 text-light">
+            <label class="form-label d-block">Sexo</label>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="sexo"
+                id="sexoM"
+                value="Masculino"
+                required
+              />
+              <label class="form-check-label" for="sexoM">Masculino</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="sexo"
+                id="sexoF"
+                value="Femenino"
+                required
+              />
+              <label class="form-check-label" for="sexoF">Femenino</label>
+            </div>
+            <div class="invalid-feedback d-block text-danger" id="sexoFeedback">
+              Selecciona tu sexo
+            </div>
+          </div>
+
+          <div class="col-12 font-monospace border border-0 text-light">
+            <label for="motivo" class="form-label">Motivo</label>
+            <select
+              class="form-select border border-0"
+              id="motivo"
+              style="background-color: #f0f0f0"
+              required
+            >
+              <option selected disabled>Selecciona un motivo</option>
+              <option value="consulta">Consulta</option>
+              <option value="sugerencia">Sugerencia</option>
+              <option value="reclamo">Reclamo</option>
+            </select>
+            <div class="invalid-feedback text-danger">
+              Selecciona un motivo válido
+            </div>
+          </div>
+
+          <div class="col-12 border border-0 font-monospace text-light">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea
+              class="form-control border border-0"
+              id="mensaje"
+              rows="4"
+              style="background-color: #f0f0f0"
+              required
+            ></textarea>
+            <div class="invalid-feedback text-danger">
+              Por favor escribe tu mensaje
+            </div>
+          </div>
+
+          <div class="text-center mt-2 border border-0">
+            <button type="submit" class="btn btn-success px-4" id="btnEnviar">
+              Enviar
+              <span
+                class="spinner-border spinner-border-sm ms-2 d-none"
+                role="status"
+                aria-hidden="true"
+                id="spinner"
+              ></span>
+            </button>
+          </div>
+        </div>
+      </form>
+      <!-- Modal de Confirmación -->
+      <div
+        class="modal fade"
+        id="modalConfirmacion"
+        tabindex="-1"
+        aria-labelledby="modalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header bg-success text-white">
+              <h5 class="modal-title" id="modalLabel">¡Envío exitoso!</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Cerrar"
+              ></button>
+            </div>
+            <div class="modal-body">
+              Tu mensaje ha sido enviado correctamente. Nos pondremos en
+              contacto contigo pronto.
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-danger"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Fin Formulario-->
+    <!--Footer-->
+    <div class="container-fluid bg-dark mt-5">
+      <footer class="py-4">
+        <div class="row row-cols-1 row-cols-md-4 justify-content-center">
+          <!-- Logo -->
+          <div class="col mb-3 text-center font-monospace" style="border: none">
+            <h5 class="text-light mb-3">Maximus Gym</h5>
+            <img
+              src="images/logo.png"
+              alt="Maximus Gym Logo"
+              class="img-fluid"
+              style="max-width: 250px"
+            />
+            <p class="text-light mt-2">
+              ¡Tu mejor opción para entrenar!<span class="fs-3">🏋🏽‍♂️​</span>
+            </p>
+          </div>
+
+          <!-- Menú -->
+          <div class="col mb-3 text-center font-monospace" style="border: none">
+            <h5 class="text-light mb-3">Menú</h5>
+            <ul class="nav flex-column text-center">
+              <li class="nav-item mb-2">
+                <a href="index.html" class="nav-link p-0 text-light">Inicio</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="nosotros.html" class="nav-link p-0 text-light"
+                  >Nosotros</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="clases.html" class="nav-link p-0 text-light">Clases</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="entrenadores.html" class="nav-link p-0 text-light"
+                  >Entrenadores</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="precios.html" class="nav-link p-0 text-light"
+                  >Precios</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="blog.html" class="nav-link p-0 text-light">Blog</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="contacto.html" class="nav-link p-0 text-light"
+                  >Contacto</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Mapa -->
+          <div class="col mb-3 font-monospace" style="border: none">
+            <h5 class="text-light text-center mb-3">
+              Ubicación<span class="fs-3">📌​</span>
+            </h5>
+            <div
+              class="ratio ratio-4x3"
+              style="max-width: 300px; margin: 0 auto"
+            >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d-122.41941548468132!3d37.77492927975971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f1a8c7b1%3A0x4c8b0c3c8b0c3c8b!2sMaximus%20Gym!5e0!3m2!1ses!2sus!4v1681234567890!5m2!1ses!2sus"
+                width="200"
+                height="150"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="col mb-3 font-monospace" style="border: none">
+            <h5 class="text-light text-center mb-3">
+              Contáctanos<span class="fs-3">​✉️​</span>
+            </h5>
+            <form id="contactForm">
+              <div class="mb-3">
+                <label for="email" class="form-label text-light">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Tu correo electrónico"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Por favor, ingresa un correo válido.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="motivo" class="form-label text-light">Motivo</label>
+                <select class="form-select" id="motivo" required>
+                  <option value="" selected disabled>
+                    Selecciona un motivo
+                  </option>
+                  <option value="consulta">Consulta</option>
+                  <option value="sugerencia">Sugerencia</option>
+                  <option value="reclamo">Reclamo</option>
+                </select>
+                <div class="invalid-feedback">
+                  Por favor, selecciona un motivo.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="mensaje" class="form-label text-light"
+                  >Mensaje</label
+                >
+                <textarea
+                  class="form-control"
+                  id="mensaje"
+                  rows="3"
+                  placeholder="Escribe tu mensaje aquí"
+                  required
+                ></textarea>
+                <div class="invalid-feedback">
+                  Por favor, escribe tu mensaje.
+                </div>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-success">
+                  <span
+                    id="spinner"
+                    class="spinner-border spinner-border-sm d-none"
+                    role="status"
+                    aria-hidden="true"
+                  ></span>
+                  Enviar
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Footer inferior -->
+          <div
+            class="bg-dark text-light py-3 border-top w-100"
+            style="border: none"
+          >
+            <div
+              class="container d-flex flex-column flex-sm-row justify-content-between"
+            >
+              <p class="mb-0">
+                &copy; 2025 Maximus Gym. Todos los derechos reservados.
+              </p>
+              <ul class="list-unstyled d-flex mt-3 footer-icons">
+                <li class="ms-3">
+                  <a href="#" class="text-light"
+                    ><i class="bi bi-instagram fs-3"></i
+                  ></a>
+                </li>
+                <li class="ms-3">
+                  <a href="#" class="text-light"
+                    ><i class="bi bi-facebook fs-3"></i
+                  ></a>
+                </li>
+                <li class="ms-3">
+                  <a href="#" class="text-light"
+                    ><i class="bi bi-youtube fs-3"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!--Fin Footer-->
+    <!--JS-Bootstrap-->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!--JS-->
+    <script src="js/main.js"></script>
+    <!--JS para las validaciones-->
+    <script src="js/validar-form.js"></script>
+  </body>
+</html>
